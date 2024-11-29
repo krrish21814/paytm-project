@@ -35,7 +35,7 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
-        timeout: 90s
+        timeout: 5m
         script: |
           sudo docker pull krishnagad/paytm-app:latest
           sudo docker stop web-app || true
