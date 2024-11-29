@@ -39,8 +39,5 @@ jobs:
           sudo docker pull krishnagad/paytm-app:latest
           sudo docker stop web-app || true
           sudo docker rm web-app || true
-          sudo docker run -d \
-            --name web-app \
-            -p 3005:3000 \
-            -e DATABASE_URL=${{ secrets.NEON_DB_URL }} \
-            krishnagad/paytm-app:latest
+          sudo docker run -d --name web-app -p 3005:3000 -e DATABASE_URL=${{ secrets.NEON_DB_URL }} krishnagad/paytm-app:latest
+
